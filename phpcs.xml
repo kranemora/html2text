@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="Custom_Standard">
+    <description>The coding standard for PHP_CodeSniffer itself.</description>
+    <arg name="colors"/>
+    <rule ref="PEAR">
+        <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+    </rule>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+        <exclude-pattern>tests/TestCase/*</exclude-pattern>
+    </rule>
+</ruleset>
